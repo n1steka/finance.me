@@ -1,11 +1,32 @@
+var uiController = (function () {})();
 
-    // оруулах өгөлөлийг дэлгэцээс авах 
+// Санхүүтэй ажиллах контроллэр
+var financeController = (function () {})();
 
-    // олж авсан өгөгдөлөө  контроллэроор дамжуулж тэнд хадлгана  
+var cntrlAddItem = function() {
+  console.log('дэлгцээс өгөгдөл авах хэсэг ');
+   // 1.  оруулах өгөлөлийг дэлгэцээс авах
+    
+    // 2 . олж авсан өгөгдөлөө  контроллэроор дамжуулж тэнд хадлгана
 
-    // олж авсан өгөгдөлүүдээ вэб дээр тохирох хэсэгт гаргана 
+    // 3. олж авсан өгөгдөлүүдээ вэб дээр тохирох хэсэгт гаргана
 
-    // төсөв тооцно 
+    // 4.төсөв тооцно
 
-    //эцсийн байдлаар гаргана 
+    // 5.эцсийн байдлаар гарганаs
+};
 
+// програм холбогч контроллэр
+var appController = (function (uiController, financeController) {
+  document.querySelector(".add__btn").addEventListener("click", function () {
+     cntrlAddItem();
+   
+  });
+document.addEventListener("keypress",function(event){
+  if(event ===13  || event.which === 13 ) { 
+    cntrlAddItem();  
+  }
+})
+
+
+})(uiController, financeController);
